@@ -156,7 +156,6 @@ function updateCalculations() {
     document.getElementById('cgpa').textContent = cgpa;
     document.getElementById('percentage').textContent = (cgpa * 9.5).toFixed(2) + '%';
 }
-
 function generatePDF() {
     const doc = new jsPDF();
     let yPos = 20;
