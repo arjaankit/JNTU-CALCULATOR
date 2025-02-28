@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JNTU Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JNTU SGPA/CGPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">JNTU SGPA & CGPA CALCULATOR</h1>
+
+        <!-- Student Details Section -->
+        <div class="student-details">
+            <div class="details-column">
+                <input type="text" id="studentName" placeholder="Student Name">
+                <input type="text" id="department" placeholder="Department">
+                <input type="text" id="collegeName" placeholder="College Name">
+            </div>
+            <div class="details-column">
+                <input type="text" id="rollNumber" placeholder="Roll Number">
+                <input type="number" id="year" placeholder="Year" min="1" max="6">
+                <select id="regulation">
+                    <option value="">Select Regulation</option>
+                    <option>R16</option>
+                    <option>R17</option>
+                    <option>R18</option>
+                    <option>R19</option>
+                    <option>R20</option>
+                    <option>R21</option>
+                    <option>R22</option>
+                    <option>R23</option>
+                    <option>R24</option>
+                    <option>R25</option>
+                </select>
+            </div>
+        </div>
+
+            <!-- Semester Controls -->
+        <div class="semester-controls">
+            <div class="form-group">
+                <label for="totalSemesters">Total Semesters:</label>
+                <input type="number" id="totalSemesters" min="1" max="10" value="1">
+            </div>
+            <div class="form-group">
+                <label for="branch">Select Branch:</label>
+                <select id="branch">
+                    <option value="">Select Branch</option>
+                    <option>B.Tech</option>
+                    <option>B.Pharmacy</option>
+                    <option>MBA</option>
+                    <option>MCA</option>
+                    <option>M.Tech</option>
+                    <option>M.Pharmacy</option>
+                    <option>B.Arch</option>
+                    <option>Pharm D (PCI)</option>
+                    <option>BCA</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="currentSemester">Current Semester:</label>
+                <select id="currentSemester">
+                    <option value="1">Semester 1</option>
+                    <!-- Add more options dynamically if needed -->
+                </select>
+            </div>
+        </div>
+
+        <!-- Subject Entry -->
+        <div class="subject-entry">
+            <div class="subject-header">
+                <span>Subject Name</span>
+                <span>Credits</span>
+                <span>Grade</span>
+                <span>Points</span>
+                <span></span>
+            </div>
+            <div id="subjectsContainer"></div>
+            <button id="addSubjectBtn" class="btn-primary">+ Add Subject</button>
+        </div>
+
+        <!-- Results -->
+        <div class="results">
+            <div class="result-box">
+                <h3>SGPA</h3>
+                <div id="sgpa">0.00</div>
+            </div>
+            <div class="result-box">
+                <h3>CGPA</h3>
+                <div id="cgpa">0.00</div>
+            </div>
+            <div class="result-box">
+                <h3>Percentage</h3>
+                <div id="percentage">0.00%</div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div style="text-align: center; margin-top: 35px;">
+            <button id="generatePdfBtn" class="btn-primary">Generate PDF Report</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
